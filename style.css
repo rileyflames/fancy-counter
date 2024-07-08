@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+:root {
+  --background-color01: #385300;
+  --background-color02: #212900;
+  --main-background-color: #bef227;
+  --numbercolor: #1d2507;
+  --button-bg-color: #1d2507;
+  --buttoncolor: #bdfe00;
+  --buttonhover: #212b06;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  all: unset;
+}
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-image: radial-gradient(
+    ellipse,
+    var(--background-color01),
+    var(--background-color02)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter {
+  background-color: var(--main-background-color);
+  width: 476px;
+  height: 615px;
+  border-radius: 12px;
+  box-shadow: 0 25px 121px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s;
+}
+.counter--limit {
+  background-color: #a3d11b;
+}
+.counter__title {
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 200px;
+  line-height: 0.9;
+  font-weight: 500;
+  font-size: 32px;
+  margin-top: 60px;
+  text-align: center;
+}
+.counter__value {
+  color: var(--numbercolor);
+  font-size: 200px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.counter__reset-button {
+  cursor: pointer;
+}
+.counter__reset-icon {
+  opacity: 0.3;
+  font-size: 35px;
+  transition: all 0.4s;
+}
+.counter__reset-icon:hover {
+  opacity: 0.5;
+}
+.counter__buttons {
+  background-color: var(--button-bg-color);
+  height: 116px;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: auto;
+  display: flex;
+}
+.counter__button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+.counter__button:hover {
+  background-color: var(--buttonhover);
+  cursor: pointer;
+}
+.counter__icon {
+  color: var(--buttoncolor);
+  opacity: 0.9;
+  font-size: 40px;
+}
+.counter__button--increase {
+  border-left: 1px solid rgba(189, 254, 0, 0.15);
+}
+@media (max-width: 680px) or (max-height: 730px) {
+  .counter {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .counter__title {
+    margin-top: 100px;
+  }
+  .counter__buttons {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
